@@ -9,7 +9,7 @@
   if (window.DesigniaConsent) return;
 
   var STYLES = ":host{all:initial}.dsg-root{--dsg-bg: #ffffff;--dsg-text: #1f2937;--dsg-btn-bg: #111827;--dsg-btn-text: #ffffff;--dsg-btn2-bg: transparent;--dsg-btn2-text: #111827;--dsg-focus: #2563eb;--dsg-muted: rgba(127, 127, 127, .25);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;font-size:15px;line-height:1.5;color:var(--dsg-text);-webkit-font-smoothing:antialiased;text-align:left}*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}[hidden]{display:none!important}.dsg-panel{background:var(--dsg-bg);color:var(--dsg-text);box-shadow:0 8px 32px #0000002e;z-index:2147483000}.dsg-title{font-size:18px;font-weight:700;line-height:1.3;margin-bottom:8px}.dsg-desc{font-size:14px}.dsg-desc a,.dsg-link{color:inherit;text-decoration:underline;text-underline-offset:2px}.dsg-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.dsg-btn{appearance:none;-webkit-appearance:none;flex:1 1 0;min-width:140px;min-height:44px;padding:10px 16px;border:2px solid var(--dsg-btn-bg);border-radius:6px;background:var(--dsg-btn-bg);color:var(--dsg-btn-text);font:inherit;font-size:15px;font-weight:600;line-height:1.2;text-align:center;cursor:pointer}.dsg-btn:hover{filter:brightness(1.12)}.dsg-btn--secondary{background:var(--dsg-btn2-bg);color:var(--dsg-btn2-text);border-color:currentColor}.dsg-btn:focus-visible,.dsg-close:focus-visible,.dsg-switch:focus-visible,.dsg-icon:focus-visible,.dsg-link:focus-visible,.dsg-desc a:focus-visible,.dsg-panel:focus-visible{outline:3px solid var(--dsg-focus);outline-offset:2px}.dsg-panel:focus:not(:focus-visible){outline:none}.dsg-banner{position:fixed;padding:20px 24px}.dsg-root[data-pos=bar] .dsg-banner{left:0;right:0;bottom:0;max-height:80vh;overflow-y:auto}.dsg-root[data-pos=bar] .dsg-banner-inner{display:flex;align-items:center;gap:24px;max-width:1200px;margin:0 auto}.dsg-root[data-pos=bar] .dsg-banner-text{flex:1 1 auto}.dsg-root[data-pos=bar] .dsg-actions{flex:0 0 auto;margin-top:0;flex-wrap:nowrap}.dsg-root[data-pos=corner] .dsg-banner{right:16px;bottom:16px;width:400px;max-width:calc(100vw - 32px);max-height:calc(100vh - 32px);overflow-y:auto;border-radius:10px}.dsg-root[data-pos=modal] .dsg-banner{top:50%;left:50%;transform:translate(-50%,-50%);width:520px;max-width:calc(100vw - 32px);max-height:calc(100vh - 32px);overflow-y:auto;border-radius:10px}.dsg-backdrop{position:fixed;inset:0;background:#00000080;z-index:2147482999}.dsg-prefs{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;max-width:calc(100vw - 32px);max-height:calc(100vh - 32px);display:flex;flex-direction:column;border-radius:10px;z-index:2147483001}.dsg-prefs-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px 12px}.dsg-prefs-head .dsg-title{margin-bottom:0}.dsg-close{appearance:none;-webkit-appearance:none;flex:0 0 auto;width:40px;height:40px;border:0;border-radius:6px;background:transparent;color:inherit;font:inherit;font-size:26px;line-height:1;cursor:pointer}.dsg-close:hover{background:var(--dsg-muted)}.dsg-prefs-body{overflow-y:auto;padding:0 24px}.dsg-cat{padding:14px 0;border-top:1px solid var(--dsg-muted)}.dsg-cat-head{display:flex;align-items:center;justify-content:space-between;gap:16px}.dsg-cat-name{font-size:15px;font-weight:700}.dsg-cat-desc{margin-top:4px;font-size:13px;opacity:.85}.dsg-always{font-size:13px;font-weight:600;white-space:nowrap;opacity:.8}.dsg-prefs .dsg-actions{padding:16px 24px 20px;margin-top:0;border-top:1px solid var(--dsg-muted)}.dsg-switch{appearance:none;-webkit-appearance:none;position:relative;flex:0 0 auto;width:48px;height:28px;border:2px solid currentColor;border-radius:999px;background:transparent;color:inherit;cursor:pointer}.dsg-switch:after{content:\"\";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:currentColor;transition:transform .15s ease}.dsg-switch[aria-checked=true]{background:var(--dsg-btn-bg);border-color:var(--dsg-btn-bg)}.dsg-switch[aria-checked=true]:after{background:var(--dsg-btn-text);transform:translate(20px)}.dsg-switch[aria-disabled=true]{cursor:not-allowed;opacity:.6}.dsg-icon{appearance:none;-webkit-appearance:none;position:fixed;left:16px;bottom:16px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:0;border-radius:50%;background:var(--dsg-btn-bg);color:var(--dsg-btn-text);box-shadow:0 4px 14px #00000040;cursor:pointer;z-index:2147482998}.dsg-icon svg{width:24px;height:24px;display:block}@media(max-width:760px){.dsg-root[data-pos=bar] .dsg-banner-inner{display:block}.dsg-root[data-pos=bar] .dsg-actions{margin-top:16px}.dsg-actions,.dsg-root[data-pos=bar] .dsg-actions{flex-direction:column;flex-wrap:nowrap}.dsg-btn{flex:0 0 auto;width:100%;min-width:0}.dsg-banner{padding:16px}.dsg-root[data-pos=corner] .dsg-banner{right:8px;left:8px;bottom:8px;width:auto;max-width:none}}@media(prefers-reduced-motion:reduce){.dsg-switch:after{transition:none}}";
-  var SCRIPT_VERSION = "1.0.0";
+  var SCRIPT_VERSION = "1.1.0";
 
   var DEFAULTS = {
     version: '1',
@@ -480,13 +480,19 @@
     }
   }
 
+  // Footer links: <a href="#cookie-settings"> or any element with data-dsg-consent-open.
+  var SETTINGS_LINK = '[data-dsg-consent-open], a[href$="#cookie-settings"]';
+
+  // The floating icon is only a fallback: a page with its own settings link doesn't get it.
+  // While the page is still parsing, the footer may not exist yet – decide after DOMContentLoaded.
   function updateIcon() {
-    icon.hidden = !(config.showIcon && current && banner.hidden && prefs.hidden);
+    var parsed = document.readyState !== 'loading';
+    var hasLink = !!document.querySelector(SETTINGS_LINK);
+    icon.hidden = !(config.showIcon && parsed && !hasLink && current && banner.hidden && prefs.hidden);
   }
 
-  // Footer links: <a href="#cookie-settings"> or any element with data-dsg-consent-open.
   function onDocumentClick(e) {
-    var el = e.target && e.target.closest && e.target.closest('[data-dsg-consent-open], a[href$="#cookie-settings"]');
+    var el = e.target && e.target.closest && e.target.closest(SETTINGS_LINK);
     if (!el) return;
     e.preventDefault();
     api.open();
@@ -528,6 +534,10 @@
       updateIcon();
     } else {
       showBanner();
+    }
+    // The script usually runs before the footer is parsed – re-check once the page is complete.
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateIcon);
     }
   }
 
